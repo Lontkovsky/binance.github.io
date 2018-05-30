@@ -10,7 +10,7 @@
 <div class="container" id="app">
     <h3 class="text-center">Binance Analysis Application </h3>
     <div class="columns medium-4" v-for="s in symbols">
-        <div class="card">
+        <div class="card" v-if="s.symbol.indexOf('BTC')+1">
             <div class="card-section">
                 <p>PAIR: {{ s.symbol }} </p>
             </div>

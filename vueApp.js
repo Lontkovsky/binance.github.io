@@ -7,11 +7,10 @@ const vm = new Vue({
            },
     mounted() {
         this.upDate();
-        this.timer = setInterval(this.upDate, 10000)
+        this.timer = setInterval(this.upDate, 900000)
     },
 
     methods:{
-
         upDate: function() {
            axios.get(url).then(response => {
                 this.symbols = response.data['data']
@@ -19,10 +18,6 @@ const vm = new Vue({
         },
         cancelAutoUpdate: function() { clearInterval(this.timer) },
 
-
-        beforeDestroy() {
-            clearInterval(this.timer)
-        }
-
+        beforeDestroy() { clearInterval(this.timer)}
     }
 });
