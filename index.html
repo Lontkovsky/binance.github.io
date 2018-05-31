@@ -9,16 +9,120 @@
 <body>
 <div class="container" id="app">
     <h3 class="text-center">Binance Analysis Application </h3>
-    <div class="columns medium-4" v-for="s in symbols">
-        <div class="card" v-if="s.symbol.indexOf('BTC')+1">
-            <div class="card-section">
+
+    <div class="columns medium-3" v-for="s in x1" >
+        <div class="card" v-if="s.symbol.indexOf('BNBBTC')+1 ">
+            <div class="card-section" >
                 <p>PAIR: {{ s.symbol }} </p>
             </div>
             <div class="card-divider">
                 <p>TDMN:  {{ s.tradedMoney }}</p>
             </div>
+            <div class="card-section" v-for="t in x2" v-if="t.symbol.indexOf('BNBBTC')+1">
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) >=0" :style="{ 'color': 'green' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) < 0" :style="{ 'color': 'red' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+            </div>
         </div>
+
+        <div class="card" v-if="s.symbol.indexOf('NULSBTC')+1 ">
+            <div class="card-section" >
+                <p>PAIR: {{ s.symbol }} </p>
+            </div>
+            <div class="card-divider">
+                <p>TDMN:  {{ s.tradedMoney }}</p>
+            </div>
+            <div class="card-section" v-for="t in x2" v-if="t.symbol.indexOf('NULSBTC')+1">
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) >=0" :style="{ 'color': 'green' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) < 0" :style="{ 'color': 'red' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+            </div>
+        </div>
+
+
+        <div class="card" v-if="s.symbol.indexOf('NEOBTC')+1 ">
+            <div class="card-section" >
+                <p>PAIR: {{ s.symbol }} </p>
+            </div>
+            <div class="card-divider">
+                <p>TDMN:  {{ s.tradedMoney }}</p>
+            </div>
+            <div class="card-section" v-for="t in x2" v-if="t.symbol.indexOf('NEOBTC')+1">
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) >=0" :style="{ 'color': 'green' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) < 0" :style="{ 'color': 'red' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+            </div>
+        </div>
+
+
+        <div class="card" v-if="s.symbol.indexOf('LINKBTC')+1 ">
+            <div class="card-section" >
+                <p>PAIR: {{ s.symbol }} </p>
+            </div>
+            <div class="card-divider">
+                <p>TDMN:  {{ s.tradedMoney }}</p>
+            </div>
+            <div class="card-section" v-for="t in x2" v-if="t.symbol.indexOf('LINKBTC')+1">
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) >=0" :style="{ 'color': 'green' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) < 0" :style="{ 'color': 'red' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+            </div>
+        </div>
+
+
+        <div class="card" v-if="s.symbol.indexOf('SALTBTC')+1 ">
+            <div class="card-section" >
+                <p>PAIR: {{ s.symbol }} </p>
+            </div>
+            <div class="card-divider">
+                <p>TDMN:  {{ s.tradedMoney }}</p>
+            </div>
+            <div class="card-section" v-for="t in x2" v-if="t.symbol.indexOf('SALTBTC')+1">
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) >=0" :style="{ 'color': 'green' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) < 0" :style="{ 'color': 'red' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+            </div>
+        </div>
+
+
+        <div class="card" v-if="s.symbol.indexOf('IOTABTC')+1 ">
+            <div class="card-section" >
+                <p>PAIR: {{ s.symbol }} </p>
+            </div>
+            <div class="card-divider">
+                <p>TDMN:  {{ s.tradedMoney }}</p>
+            </div>
+            <div class="card-section" v-for="t in x2" v-if="t.symbol.indexOf('IOTABTC')+1">
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) >=0" :style="{ 'color': 'green' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) < 0" :style="{ 'color': 'red' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+            </div>
+        </div>
+
+
+        <div class="card" v-if="s.symbol.indexOf('ETCBTC')+1 ">
+            <div class="card-section" >
+                <p>PAIR: {{ s.symbol }} </p>
+            </div>
+            <div class="card-divider">
+                <p>TDMN:  {{ s.tradedMoney }}</p>
+            </div>
+            <div class="card-section" v-for="t in x2" v-if="t.symbol.indexOf('ETCBTC')+1">
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) >=0" :style="{ 'color': 'green' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) < 0" :style="{ 'color': 'red' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+            </div>
+        </div>
+
+        <div class="card" v-if="s.symbol.indexOf('ETHBTC')+1 ">
+            <div class="card-section" >
+                <p>PAIR: {{ s.symbol }} </p>
+            </div>
+            <div class="card-divider">
+                <p>TDMN:  {{ s.tradedMoney }}</p>
+            </div>
+            <div class="card-section" v-for="t in x2" v-if="t.symbol.indexOf('ETHBTC')+1">
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) >=0" :style="{ 'color': 'green' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+                <p v-if="( (t.tradedMoney / s.tradedMoney )*100 - 100) < 0" :style="{ 'color': 'red' }">DIFF:  {{ ((t.tradedMoney / s.tradedMoney )*100 - 100) + " %"}}</p>
+            </div>
+        </div>
+
+
     </div>
+
 
 </div>
 
